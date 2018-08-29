@@ -1,0 +1,21 @@
+.login-box {
+  margin-top: 14px;
+  padding-top: 14px; }
+
+.header-text-small {
+  font-size: 12px; }
+
+.header-text-medium {
+  font-size: 20px; }
+
+.header-text-big {
+  font-size: 40px; }
+
+.navigation {
+  margin-top: 20px;
+  background: #F00; }
+
+.selected-status, .navigation {
+  font-weight: bold; }
+
+/*# sourceMappingURL=01_%E6%8F%92%E5%80%BC.css.map */

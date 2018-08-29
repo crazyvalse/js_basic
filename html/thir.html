@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+	<meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<button onclick="addData()">click</button>
+<div id="container" style="height: 100%"></div>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+<script type="text/javascript">
+	var dom = document.getElementById("container");
+	var myChart = echarts.init(dom);
+	var app = {};
+	option = null;
+	myChart.showLoading();
+
+	var data1 = {
+		"name": "flare",
+		"children": [
+			{
+				"name": "data",
+				"children": [
+					{
+						"name": "converters",
+						"children": [
+							{"name": "Converters", "value": 721},
+							{"name": "DelimitedTextConverter", "value": 4294}
+						]
+					},
+					{
+						"name": "DataUtil",
+						"value": 3322
+					}
+				]
+			},
+			{
+				"name": "display",
+				"children": [
+					{"name": "DirtySprite", "value": 8833},
+					{"name": "LineSprite", "value": 1732},
+					{"name": "RectSprite", "value": 3623}
+				]
+			},
+			{
+				"name": "flex",
+				"children": [
+					{"name": "FlareVis", "value": 4116}
+				]
+			},
+			{
+				"name": "query",
+				"children": [
+					{"name": "AggregateExpression", "value": 1616},
+					{"name": "And", "value": 1027},
+					{"name": "Arithmetic", "value": 3891},
+					{"name": "Average", "value": 891},
+					{"name": "BinaryExpression", "value": 2893},
+					{"name": "Comparison", "value": 5103},
+					{"name": "CompositeExpression", "value": 3677},
+					{"name": "Count", "value": 781},
+					{"name": "DateUtil", "value": 4141},
+					{"name": "Distinct", "value": 933},
+					{"name": "Expression", "value": 5130},
+					{"name": "ExpressionIterator", "value": 3617},
+					{"name": "Fn", "value": 3240},
+					{"name": "If", "value": 2732},
+					{"name": "IsA", "value": 2039},
+					{"name": "Literal", "value": 1214},
+					{"name": "Match", "value": 3748},
+					{"name": "Maximum", "value": 843},
+					{
+						"name": "methods",
+						"children": [
+							{"name": "add", "value": 593},
+							{"name": "and", "value": 330},
+							{"name": "average", "value": 287},
+							{"name": "count", "value": 277},
+							{"name": "distinct", "value": 292},
+							{"name": "div", "value": 595},
+							{"name": "eq", "value": 594},
+							{"name": "fn", "value": 460},
+							{"name": "gt", "value": 603},
+							{"name": "gte", "value": 625},
+							{"name": "iff", "value": 748},
+							{"name": "isa", "value": 461},
+							{"name": "lt", "value": 597},
+							{"name": "lte", "value": 619},
+							{"name": "max", "value": 283},
+							{"name": "min", "value": 283},
+							{"name": "mod", "value": 591},
+							{"name": "mul", "value": 603},
+							{"name": "neq", "value": 599},
+							{"name": "not", "value": 386},
+							{"name": "or", "value": 323},
+							{"name": "orderby", "value": 307},
+							{"name": "range", "value": 772},
+							{"name": "select", "value": 296},
+							{"name": "stddev", "value": 363},
+							{"name": "sub", "value": 600},
+							{"name": "sum", "value": 280},
+							{"name": "update", "value": 307},
+							{"name": "variance", "value": 335},
+							{"name": "where", "value": 299},
+							{"name": "xor", "value": 354},
+							{"name": "_", "value": 264}
+						]
+					},
+					{"name": "Minimum", "value": 843},
+					{"name": "Not", "value": 1554},
+					{"name": "Or", "value": 970},
+					{"name": "Query", "value": 13896},
+					{"name": "Range", "value": 1594},
+					{"name": "StringUtil", "value": 4130},
+					{"name": "Sum", "value": 791},
+					{"name": "Variable", "value": 1124},
+					{"name": "Variance", "value": 1876},
+					{"name": "Xor", "value": 1101}
+				]
+			},
+			{
+				"name": "scale",
+				"children": [
+					{"name": "IScaleMap", "value": 2105},
+					{"name": "LinearScale", "value": 1316},
+					{"name": "LogScale", "value": 3151},
+					{"name": "OrdinalScale", "value": 3770},
+					{"name": "QuantileScale", "value": 2435},
+					{"name": "QuantitativeScale", "value": 4839},
+					{"name": "RootScale", "value": 1756},
+					{"name": "Scale", "value": 4268},
+					{"name": "ScaleType", "value": 1821},
+					{"name": "TimeScale", "value": 5833}
+				]
+			}
+		]
+	};
+
+
+	myChart.hideLoading();
+
+	myChart.setOption(option = {
+		tooltip: {
+			trigger: 'item',
+			triggerOn: 'mousemove'
+		},
+		legend: {
+			top: '2%',
+			left: '3%',
+			orient: 'vertical',
+			data: [{
+				name: 'tree1',
+				icon: 'rectangle'
+			}],
+			borderColor: '#c23531'
+		},
+		series: [
+			{
+				type: 'tree',
+
+				name: 'tree1',
+				// initialTreeDepth:'0',
+
+				data: [data1],
+
+				top: '5%',
+				left: '7%',
+				bottom: '2%',
+				right: '60%',
+
+				symbolSize: 7,
+
+				label: {
+					normal: {
+						position: 'left',
+						verticalAlign: 'middle',
+						align: 'right'
+					}
+				},
+
+				leaves: {
+					label: {
+						normal: {
+							position: 'right',
+							verticalAlign: 'middle',
+							align: 'left'
+						}
+					}
+				},
+
+				expandAndCollapse: true,
+
+				animationDuration: 550,
+				animationDurationUpdate: 750
+				//树
+				// layout: 'radial',
+				//
+				// symbol: 'emptyCircle',
+				//
+				// symbolSize: 7,
+				//
+				// animationDurationUpdate: 750
+				//圆
+
+			}
+		]
+	});
+
+
+	var count = 1000;
+	var arrayInstance = [];
+
+	/**
+	 * 1. 创建一个随机数组
+	 * 2. 寻找 ai 的叶节点
+	 * 3. 把随机数组放到叶节点上
+	 * 4. 把随机数组push到 option中
+	 */
+
+	var _e = {
+		"name": "newData0",
+		"value": 1,
+		"children": [
+			{
+				"name": "newData1",
+				"value": 2,
+			}
+		]
+	}
+
+
+	function getLastChildren (o) {
+		if (!o.children) {
+			return o;
+		} else if (o.children && o.children instanceof Array && o.children.length) {
+			return getLastChildren(o.children[Math.floor(Math.random() * o.children.length)]);
+		}
+	}
+
+	function getRandomArray () {
+		var arr = [];
+		for (var i = 0, n = Math.floor(Math.random() * 5) || 1; i < n; i++) {
+			arr.push({
+				"name": "newData" + count++,
+				"value": 883333,
+				// "children":[
+				//     {
+				//         "name": "newData2",
+				//         "value": 883334,
+				//     }
+				// ]
+			});
+		}
+		return arr;
+	}
+	
+
+	function addData () {
+		// var item = data1.children[Math.floor(Math.random()*data1.children.length)];
+		var _children = getRandomArray();
+		var _lastChild = getLastChildren(data1);
+		console.info(_lastChild);
+		_lastChild.children = _children;
+
+		myChart.setOption(option);
+	}
+
+	if (option && typeof option === "object") {
+		myChart.setOption(option, true);
+		// console.log(option.series[0].initialTreeDepth);
+	}
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+a {
+  font-weight: bold;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+  body.firefox a {
+    font-weight: normal; }
+
+#main {
+  color: black; }
+  #main-sidebar {
+    border: 1px solid; }
+
+/*# sourceMappingURL=02_%E7%88%B6%E9%80%89%E6%8B%A9%E5%99%A8&.css.map */

@@ -1,0 +1,46 @@
+$num : 10;
+//@if
+p {
+  @if $num + 1 ==2 {color: red}
+  @else if $num < 10 {color: yellow}
+  @else {color: black}
+}
+
+@for $i from 1 through 3 {
+  .margin-#{$i}{width: 10px * $i}
+}
+
+@for $i from 1 to 3 {
+  .margin-#{$i}{width: 10px * $i}
+}
+/*-------1-------*/
+@each $item in panama, sea, owen {
+  .#{$item}-icon {
+    background-image: url('./image/#{$item}.png');
+  }
+}
+/*-------2-------*/
+@each $item, $color in (panama, blue),
+        (sea, yellow)
+{
+  .#{$item}-icon {
+    background-image: url('./image/#{$item}.png');
+    background-color: $color;
+  }
+}
+/*-------3-------*/
+@each $item, $color in (panama: blue,sea: yellow)
+{
+  .#{$item}-icon {
+    background-image: url('./image/#{$item}.png');
+    background-color: $color;
+  }
+}
+/*-------4-------*/
+@while($num < 13){
+  .item-#{$num}{
+    width: 10px * $num;
+  }
+
+  $num: $num + 1;
+}

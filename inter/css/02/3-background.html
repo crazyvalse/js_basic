@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>background</title>
+	<style>
+		.c1 {
+			height: 90px;
+			/*background: red;*/
+			/*background: hsla(48, 69%, 64%, 0.32);
+			background: rgba(48, 69, 64, 0.32);*/
+			background: url(./test.png);
+		}
+
+		.c2 {
+			height: 90px;
+			background: -webkit-linear-gradient(0deg, red 10%, yellow 50%, green); /*角度*/
+		}
+
+		.c3 {
+			height: 90px;
+			background: -webkit-linear-gradient(135deg, transparent 0%, transparent 49.5%, green 49.5%, green 50.5%, transparent 50.5%, transparent 100%), /*角度*/ -webkit-linear-gradient(45deg, transparent 0%, transparent 49.5%, #801e17 49.5%, green 50.5%, transparent 50.5%, transparent 100%); /*角度*/
+			background-size: 30px;
+		}
+
+		.c4 {
+			height: 200px;
+			/*background: red;*/
+			/*background: hsla(48, 69%, 64%, 0.32);
+			background: rgba(48, 69, 64, 0.32);*/
+			background: url(./test.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: 100px 50px;
+		}
+
+		.c5 {
+			height: 40px;
+			width: 40px;
+			/*background: red;*/
+			/*background: hsla(48, 69%, 64%, 0.32);
+			background: rgba(48, 69, 64, 0.32);*/
+			background: url(./test_bg.png);
+			background-repeat: no-repeat;
+			background-position:-34px -10px ;
+		}
+	</style>
+</head>
+<body>
+<div class="c1">
+	c1
+</div>
+<div class="c2">
+	c2
+</div>
+<div class="c3">
+	c3
+</div>
+<div class="c4">
+	c4
+</div>
+<div class="c5">
+	c5
+</div>
+
+base64会是以前的 4/3, 会增加解码的压力
+</body>
+</html>

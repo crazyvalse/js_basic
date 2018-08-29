@@ -1,0 +1,36 @@
+@import "./04_mixin";
+
+//.nav {
+//  text-align: center;
+//  @include selected;
+//}
+//
+//.sub-nav {
+//  width: 10px;
+//  @include selected;
+//}
+//
+//div{
+//  @include selected;
+//}
+//
+//.content {
+//  @import "./ii";
+//}
+//
+//.container {
+//  @include disabled;
+//}
+
+
+.nav {
+  @include selected-method(red)
+}
+
+@import "var";
+
+$height:60px;
+.sub-nav {
+  height: $height;
+}
+

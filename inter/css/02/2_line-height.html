@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>line-height</title>
+</head>
+<body>
+<div style="background:red">
+	<span>图片经典的3px空隙, img 默认是inline，是按照baseline对齐，也就是基线对齐，基线到底线之间是有空隙的</span>
+	<div></div>
+	<img src="test.png"/>
+</div>
+<div style="background:blue" >
+	1. 设vertical-align
+	<img src="test.png" style="vertical-align: bottom"/>
+</div>
+
+<div style="background:yellow" >
+	2. 设 display：block
+	<img src="test.png" style="display: block;"/>
+</div>
+</body>
+</html>

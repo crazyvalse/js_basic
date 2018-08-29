@@ -1,0 +1,78 @@
+//1. 嵌套
+.container {
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+  .nav {
+    height: 80px;
+    background-color: orange;
+  }
+}
+
+//2. 父选择器
+.select {
+  .nav &{
+    background-color: red;
+  }
+  .sub-nav &{
+    background-color: yellow;
+  }
+}
+
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//3. 群选择器
+nav, aside {
+  a {
+    color: blue;
+  }
+}
+
+//4. 选择器 > + ~
+// > 子元素
+// + 邻居
+// ~ 所有邻居
+div.container {
+  .content{
+    > p{
+      color: blue;
+    }
+    + div{
+      color: red;
+    }
+    ~ div{
+      color: yellow;
+    }
+  }
+}
+
+//5. 支持 嵌套属性
+nav {
+  border: 1px solid #ccc {
+    left: 0px;
+    right: 0px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

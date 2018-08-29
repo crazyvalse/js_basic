@@ -1,0 +1,21 @@
+@import "./colors";
+
+$tr-height: 20px;
+
+
+.nav {
+  color: $founder-color-orange-100;
+}
+
+.sub-nav {
+  color: $founder-color-orange-300;
+}
+
+.container {
+  table {
+    tr {
+      height: $tr-height;
+    }
+  }
+
+}

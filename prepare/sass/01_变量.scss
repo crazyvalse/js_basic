@@ -1,0 +1,24 @@
+//1. 定义变量
+$primary-color: orange;
+
+.nav {
+  color: $primary-color;
+}
+
+//2 局部变量
+.sub-nav {
+  $primary-color: red;
+  color: $primary-color;
+}
+
+//3 可以在其他变量中引用
+$primary-border: 1px solid $primary-color;
+.selected{
+  border: $primary-border;
+}
+
+//4 中划线以及下划线
+
+.btn {
+  color: $primary_color;
+}

@@ -1,0 +1,39 @@
+//if else
+$width: 6px;
+
+@mixin my-color($width) {
+  @if ($width < 10) {
+    color: red;
+  } @else if ($width > 10){
+    color: yellow;
+  } @else {
+    color: blue;
+  }
+}
+
+div {
+  @include my-color(10);
+}
+
+//for
+
+@for $i from 1 through 5 {
+  .margin-#{$i * 10} {
+    margin-top: $i * 10px;
+  }
+}
+
+$list:(logo: founder, nav: ii, sub: jj);
+
+@mixin image-background($list){
+  @each $key, $value in $list {
+    .nav-#{$key} {
+      background-image: url('./image/#{$value}.jpg');
+    }
+  }
+}
+
+.container {
+  @include image-background((logo: founder, nav: ii, sub: jj))
+}
+

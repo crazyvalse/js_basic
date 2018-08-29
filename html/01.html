@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	/**
+	 * Created by codingnuts on 2018/3/5.
+	 */
+	function Person (name, age, job) {
+		//1.
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		this.friends = ["li", "zhang", "wang"]; //2.
+	}
+
+	Person.prototype = {
+		//3.
+		constructor: Person,
+		sayName: function () {
+			console.info(this.name);
+		}
+	};
+
+	var p1 = new Person("zac", 12, "joker");
+
+	var p2 = new Person ("zelda", 100, "princess");
+	console.info(p1.__proto__);
+</script>
+</body>
+</html>

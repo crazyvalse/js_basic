@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body ng-app="app">
+	<div ng-controller="MyCtrl">
+		<h1>{{msg}}</h1>
+	</div>
+<script src="../../bower_components/angular/angular.min.js"></script>
+<script>
+	angular.module("app", []).controller("MyCtrl", function ($scope) {
+		$scope.msg = "Hello World";
+	});
+</script>
+</body>
+</html>

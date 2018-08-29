@@ -1,0 +1,40 @@
+//1. 变量
+$width: 10px;
+
+.logo {
+  width: $width;
+  border: $width red solid;
+}
+
+//2. 作用域
+.logo1 {
+  $width: 20px;
+  width: $width;
+  border: $width red solid;
+}
+
+$width2: $width - 5;
+.nav {
+  width: $width2;
+}
+
+$num: 1px;  //10 + - * /
+$string: 'hello';
+$color: blue; // #fff rgb(11,2,3)
+$boolean: true;
+$list: 1,2,3,4;
+
+$founder-color-orange-100: orange;
+$founder-color-orange-200: orange * 0.9;
+$founder-color-orange-300: orange * 0.8;
+$founder-color-orange-400: orange * 0.7;
+$founder-color-orange-500: orange * 0.4;
+
+
+
+$nav-color: $founder-color-orange-300;
+
+.sub-nav {
+  color: $nav-color;
+  background-color: $nav_color;
+}

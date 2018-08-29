@@ -1,0 +1,22 @@
+.disabled, .enabled {
+  color: red;
+  background-color: white;
+}
+
+h1 .disabled, h1 .enabled {
+  width: 70px;
+}
+
+div .disabled, div .enabled {
+  width: 20px;
+}
+
+.disabled span {
+  width: 90px;
+}
+
+.enabled p {
+  color: #00AA88;
+}
+
+/*# sourceMappingURL=06_extend.css.map */

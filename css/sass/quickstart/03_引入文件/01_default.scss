@@ -1,0 +1,8 @@
+//如果这个变量被声明赋值了，那就用它声明的值，否则就用这个默认值。 -
+// ---- 假如你写了一个可被他人通过@import导入的sass库文件，你可能希望导入者可以定制修改sass库文件中的某些值。
+
+$fancybox-width: 400px !default;
+.fancybox {
+  width: $fancybox-width;
+}
+

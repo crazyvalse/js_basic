@@ -1,0 +1,31 @@
+.container .logo {
+  width: 70px;
+  height: 70px; }
+.container .nav {
+  height: 80px;
+  background-color: orange; }
+
+.nav .select {
+  background-color: red; }
+.sub-nav .select {
+  background-color: yellow; }
+
+a:hover {
+  text-decoration: none; }
+
+nav a, aside a {
+  color: blue; }
+
+div.container .content > p {
+  color: blue; }
+div.container .content + div {
+  color: red; }
+div.container .content ~ div {
+  color: yellow; }
+
+nav {
+  border: 1px solid #ccc;
+    border-left: 0px;
+    border-right: 0px; }
+
+/*# sourceMappingURL=02_css%E5%B5%8C%E5%A5%97.css.map */

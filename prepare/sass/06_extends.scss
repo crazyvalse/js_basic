@@ -1,0 +1,25 @@
+.selected {
+  background-color: orange;
+  border: 1px black solid;
+  a {
+    color: white;
+  }
+}
+
+.nav {
+  .selected {
+    color: #00CC00;
+  }
+}
+
+.sub-nav {
+  .selected {
+    color: #00CCFF;
+  }
+}
+
+
+.disabled {
+  color: grey;
+  @extend .selected;
+}

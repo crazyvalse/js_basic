@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		html * {
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<style>
+			.layout.float div{
+				height: 100px;
+			}
+
+			.layout .left {
+				background-color: red;
+				width: 300px;
+				float: left;
+			}
+
+			.layout .right {
+				background-color: blue;
+				width: 300px;
+				float: right;
+			}
+
+			.layout .container {
+				background-color: yellow;
+			}
+		</style>
+		<article class="layout float">
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="container"></div>
+		</article>
+	</section>
+</body>
+</html>

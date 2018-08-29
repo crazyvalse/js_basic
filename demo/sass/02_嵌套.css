@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/*
+!*p {
+  color: #adff46;
+}
+
+.d1 p {
+  color: #ffd29b;
+}
+
+.d2 p {
+  color: blue
+}*!
+
+!*.d1 p {
+  color: red;
+}
+
+.d1 span {
+  color: yellow;
+}*!
+
+// 1. 嵌套
+!*.d1 {
+  p {
+    color: red;
+  }
+  span {
+    color: yellow;
+  }
+}*!
+
+
+// 2. 占位符 &
+
+p {
+  color: #666666;
+
+  .d1 & {
+    color: #5e5e5e;
+  }
+
+  .d2 & {
+    color: #1b809e;
+  }
+}
+
+!*a {
+  color: #1b809e;
+  &:hover {
+    color: yellow;
+    text-decoration: none;
+  }
+  &:visited {
+    color: red;
+  }
+}*!
+
+.d1 , .d2 {
+  p{
+    color: yellow;
+  }
+}*/
+nav {
+  border: 1px solid red;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+.nav2 {
+  border: 1px solid red;
+  border-top: 0px;
+  border-bottom: 0px;
+}
+
+/*# sourceMappingURL=02_%E5%B5%8C%E5%A5%97.css.map */

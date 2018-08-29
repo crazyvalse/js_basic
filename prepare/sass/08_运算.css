@@ -1,0 +1,57 @@
+p {
+  color: black; }
+
+.margin-1 {
+  width: 10px; }
+
+.margin-2 {
+  width: 20px; }
+
+.margin-3 {
+  width: 30px; }
+
+.margin-1 {
+  width: 10px; }
+
+.margin-2 {
+  width: 20px; }
+
+/*-------1-------*/
+.panama-icon {
+  background-image: url("./image/panama.png"); }
+
+.sea-icon {
+  background-image: url("./image/sea.png"); }
+
+.owen-icon {
+  background-image: url("./image/owen.png"); }
+
+/*-------2-------*/
+.panama-icon {
+  background-image: url("./image/panama.png");
+  background-color: blue; }
+
+.sea-icon {
+  background-image: url("./image/sea.png");
+  background-color: yellow; }
+
+/*-------3-------*/
+.panama-icon {
+  background-image: url("./image/panama.png");
+  background-color: blue; }
+
+.sea-icon {
+  background-image: url("./image/sea.png");
+  background-color: yellow; }
+
+/*-------4-------*/
+.item-10 {
+  width: 100px; }
+
+.item-11 {
+  width: 110px; }
+
+.item-12 {
+  width: 120px; }
+
+/*# sourceMappingURL=08_%E8%BF%90%E7%AE%97.css.map */

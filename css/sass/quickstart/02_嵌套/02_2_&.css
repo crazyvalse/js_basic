@@ -1,0 +1,18 @@
+@charset "UTF-8";
+/*
+article a {
+  color: blue;
+  //悬浮的时候 会把所有a标签都变成红色
+  :hover { color: red }
+}*/
+article a {
+  color: blue; }
+  article a:hover {
+    color: red; }
+
+#content aside {
+  color: red; }
+  body.ie #content aside {
+    color: green; }
+
+/*# sourceMappingURL=02_2_&.css.map */

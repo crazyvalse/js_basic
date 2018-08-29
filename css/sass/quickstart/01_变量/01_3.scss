@@ -1,0 +1,11 @@
+// 3. 中划线和下划线是兼容的
+$link-color: blue;
+a {
+  color: $link_color;
+}
+
+//编译后
+
+a {
+  color: blue;
+}

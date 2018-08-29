@@ -1,0 +1,9 @@
+//包含最后一个
+@for $i from 1 through 3 {
+  .item-#{$i} { width: 2em * $i; }
+}
+
+//不包含最后一个
+@for $i from 1 to 3 {
+  .item-#{$i} { width: 2em * $i; }
+}

@@ -1,0 +1,38 @@
+$full-width: 960px;
+$sidebar-width: 200px;
+// 加法
+.content {
+  width: $full-width + $sidebar-width;
+}
+// 减法
+.content1 {
+  width: $full-width -  $sidebar-width;
+}
+// 乘法
+.content2 {
+  width: $full-width * 2;
+}
+// 除法
+.content3 {
+  width: $full-width / 2;
+}
+// 混合运算
+.box {
+  width: ((220px + 720px) - 11 * 20 ) / 12 ;
+}
+// 颜色加法
+p {
+  color: #010203 + #040506;
+}
+// 颜色乘法
+.poo {
+  color: #010203 * 2;
+}
+// 字符串拼接
+$content: "Hello" + "" + "Sass!";
+.box:before {
+  content: " #{$content} ";
+}
+div {
+  cursor: e + -resize;
+}

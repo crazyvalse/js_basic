@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAcA,OAAO;EALL,QAAQ,EAAE,QAAQ;EAAE,IAAI,EAMC,IAAI;EANC,GAAG,EAF3B,IAAQ",
+"sources": ["03_annocation.scss"],
+"names": [],
+"file": "03_annocation.css"
+}

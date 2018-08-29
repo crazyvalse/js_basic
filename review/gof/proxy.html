@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<img class="myImg"/>
+
+<script>
+	function lazy (dom, src, loading) {
+		var img = new Image;
+		img.onload = function () {
+			dom.src = this.src;
+		};
+
+		dom.src = loading;
+		img.src = src;
+	}
+
+	lazy(document.querySelector(".myImg"), 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1527766726570&di=8aa9a458164947b01a653bdffbd13332&imgtype=0&src=http%3A%2F%2Fcrawl.nosdn.127.net%2F1bf3fd0ffb0eb175aa748e7a134dd313%2Faea20afc2ed39d85aa1e555b33226458.png', './loading.gif');
+
+
+</script>
+</body>
+</html>

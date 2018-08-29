@@ -1,0 +1,19 @@
+//SCSS - 只会去掉前后的引号
+.test1 {
+  content:  unquote('Hello Sass!') ;
+}
+.test2 {
+  content: unquote("Hello Sass!");
+}
+.test3 {
+  content: unquote("Im Web Designer");
+}
+.test4 {
+  content: unquote("'Hello Sass!'");
+}
+.test5 {
+  content: unquote('"Hello Sass!"');
+}
+.test6 {
+  content: unquote(Hello Sass);
+}

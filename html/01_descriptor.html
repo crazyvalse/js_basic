@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+
+<script>
+	//var age = 123;
+	//console.info(Object.getOwnPropertyDescriptor(window, "name"));
+
+	function Person (name, age , job) {
+		this.name = name;
+		this.age = age;
+		this.job= job;
+
+		this.sayName = function () {
+			console.info(this.name);
+		};
+
+	}
+
+	Person("Black Panther", 30, "King");
+
+	sayName();
+
+
+</script>
+</body>
+</html>

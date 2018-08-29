@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<button onclick="showTrack()">显示某人的行踪</button>
+<button onclick="changePerson()">切换</button>
+<button onclick="locate()">定位</button>
+<div>地图</div>
+
+<script src="http://www.google.com/map.min.js"></script>
+<script src="./001.js"></script>
+<script>
+
+	var map = new BaiduMap();
+
+	function showTrack () {
+		var data = ajaxTrack(11);
+		data.coords.forEach(function (item) {
+			map.addPointer(item);
+		});
+	}
+	
+	function changePerson () {
+
+
+		var data = ajaxTrack(12);
+		data.coords.forEach(function (item) {
+			map.addPointer(item);
+		});
+	}
+
+	function ajaxTrack () {
+		return {
+			coords: [
+				{
+					x: "22.003839",
+					y: "44.2113434"
+				},
+				{
+					x: "21.003839",
+					y: "44.2113434"
+				},
+				{
+					x: "242.003839",
+					y: "44.2113434"
+				},
+				{
+					x: "26.003839",
+					y: "446.2113434"
+				},
+				{
+					x: "252.003839",
+					y: "44.2113434"
+				}
+			]
+		}
+	}
+
+</script>
+</body>
+</html>

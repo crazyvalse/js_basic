@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+
+<script>
+	function bigHeap(N) {
+		var result = [];
+		for (var i = 0; i < N; i++)
+			result.push({ 'number': i, 'prev': result[-1] });
+		return result;
+	}
+
+	function add(a, b) {
+		return [a[0] + b[0], a[1] + b[1]];
+	}
+
+	function vecfib(n) {
+		var v1 = [0, 0];
+		var v2 = [1, 1];
+		for (var i = 0; i < n; i++) {
+			var v = add(v1, v2);
+			v1 = v2;
+			v2 = v;
+		}
+		return v1;
+	}
+
+	setInterval(test, 10 * 1000);
+
+	function test(){
+		var t = {};
+		var iters = 10000000;
+		t.smallheap_start = Date.now();
+		var dummy1 = vecfib(iters);
+		t.smallheap_end = Date.now();
+		H = bigHeap(10000000);
+		t.bigheap_start = Date.now();
+		var dummy2 = vecfib(iters);
+		t.bigheap_end = Date.now();
+
+		console.info("Small heap: " + ((t.smallheap_end - t.smallheap_start) / iters) * 1000000 + " ns/iter");
+		console.info("Big heap: " + ((t.bigheap_end - t.bigheap_start) / iters) * 1000000 + " ns/iter");
+	}
+
+</script>
+</body>
+</html>

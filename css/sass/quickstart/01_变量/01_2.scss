@@ -1,0 +1,12 @@
+//定义多个变量 变量间引用
+$highlight-color: #F90;
+$highlight-border: 1px solid $highlight-color;
+.selected {
+  border: $highlight-border;
+}
+
+//编译后
+
+.selected {
+  border: 1px solid #F90;
+}

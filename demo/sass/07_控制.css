@@ -1,0 +1,35 @@
+div {
+  color: blue;
+}
+
+.margin-10 {
+  margin-top: 10px;
+}
+
+.margin-20 {
+  margin-top: 20px;
+}
+
+.margin-30 {
+  margin-top: 30px;
+}
+
+.margin-40 {
+  margin-top: 40px;
+}
+
+.margin-50 {
+  margin-top: 50px;
+}
+
+.container .nav-logo {
+  background-image: url("./image/founder.jpg");
+}
+.container .nav-nav {
+  background-image: url("./image/ii.jpg");
+}
+.container .nav-sub {
+  background-image: url("./image/jj.jpg");
+}
+
+/*# sourceMappingURL=07_%E6%8E%A7%E5%88%B6.css.map */

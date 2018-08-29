@@ -1,0 +1,12 @@
+//SCSS
+.testu {
+  text: to-upper-case(aaaaa);
+  text: to-upper-case(aA-aAAA-aaa);
+}
+
+
+//SCSS
+.testl {
+  text: to-lower-case(AAAAA);
+  text: to-lower-case(aA-aAAA-aaa);
+}

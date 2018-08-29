@@ -1,0 +1,13 @@
+.founder-select {
+  color: orange;
+  border: 1px grey solid;
+  height: 30px; }
+
+.content p {
+  color: red; }
+  .content p:hover {
+    color: blue; }
+  .content p:visited {
+    color: yellow; }
+
+/*# sourceMappingURL=05_mixin.css.map */

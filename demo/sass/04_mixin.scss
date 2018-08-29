@@ -1,0 +1,25 @@
+//1. 代码块的复用
+@mixin selected {
+  border: 2px red solid;
+  color: red;
+  background-color: white;
+}
+
+@mixin disabled {
+  border: 2px red solid;
+  color: grey;
+  background-color: white;
+}
+
+@mixin selected-method($border, $background){
+  border: 2px $border solid;
+  color: red;
+  background-color: $background;
+}
+
+
+@mixin selected-method($border, $background: white){
+  border: 2px $border solid;
+  color: red;
+  background-color: $background;
+}

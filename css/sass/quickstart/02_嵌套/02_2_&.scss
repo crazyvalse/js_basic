@@ -1,0 +1,15 @@
+/*
+article a {
+  color: blue;
+  //悬浮的时候 会把所有a标签都变成红色
+  :hover { color: red }
+}*/
+article a {
+  color: blue;
+  &:hover { color: red }
+}
+
+#content aside {
+  color: red;
+  body.ie & { color: green }
+}

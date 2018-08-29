@@ -1,0 +1,13 @@
+%mt5 {
+  margin-top: 5px;
+}
+
+%pt {
+  padding-top: 5px;
+}
+
+.nav {
+  p {
+    @extend %mt5;
+  }
+}

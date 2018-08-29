@@ -1,0 +1,13 @@
+//SCSS
+.test1 {
+  content:  quote('Hello Sass!');
+}
+.test2 {
+  content: quote("Hello Sass!");
+}
+.test3 {
+  content: quote(ImWebDesigner);
+}
+.test4 {
+  content: quote(' ');
+}

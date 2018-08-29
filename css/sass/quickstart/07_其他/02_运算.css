@@ -1,0 +1,28 @@
+.content {
+  width: 1160px; }
+
+.content1 {
+  width: 760px; }
+
+.content2 {
+  width: 1920px; }
+
+.content3 {
+  width: 480px; }
+
+.box {
+  width: 60px; }
+
+p {
+  color: #050709; }
+
+.poo {
+  color: #020406; }
+
+.box:before {
+  content: " HelloSass! "; }
+
+div {
+  cursor: e-resize; }
+
+/*# sourceMappingURL=01_%E8%BF%90%E7%AE%97.css.map */

@@ -1,0 +1,16 @@
+.selected, .disabled {
+  background-color: orange;
+  border: 1px black solid; }
+  .selected a, .disabled a {
+    color: white; }
+
+.nav .selected, .nav .disabled {
+  color: #00CC00; }
+
+.sub-nav .selected, .sub-nav .disabled {
+  color: #00CCFF; }
+
+.disabled {
+  color: grey; }
+
+/*# sourceMappingURL=06_extends.css.map */

@@ -1,0 +1,11 @@
+//内嵌套
+.container {
+  h1, h2, h3 {
+    margin-left: .8em;
+  }
+}
+
+//外嵌套
+nav, aside {
+  a {color: blue}
+}

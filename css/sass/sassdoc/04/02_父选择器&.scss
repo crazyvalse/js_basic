@@ -1,0 +1,12 @@
+//用 & 代表嵌套规则外层的父选择器。
+a {
+  font-weight: bold;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+  body.firefox & { font-weight: normal; }
+}
+
+#main {
+  color: black;
+  &-sidebar { border: 1px solid; }
+}

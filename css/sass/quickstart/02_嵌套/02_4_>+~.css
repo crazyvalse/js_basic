@@ -1,0 +1,15 @@
+/*
+article section { margin: 5px }
+article > section { border: 1px solid #ccc }*/
+article ~ article {
+  border-top: 1px dashed #ccc; }
+article > section {
+  background: #eee; }
+article dl > dt {
+  color: #333; }
+article dl > dd {
+  color: #555; }
+nav + article {
+  margin-top: 0; }
+
+/*# sourceMappingURL=02_4_%3E+~.css.map */

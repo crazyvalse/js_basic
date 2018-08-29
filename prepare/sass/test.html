@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<style>
+		a :hover {
+			text-decoration: none; }
+
+		div.container .content > p {
+			color: blue; }
+		div.container .content + div {
+			color: red; }
+		div.container .content ~ div {
+			color: yellow; }
+	</style>
+</head>
+<body>
+<a href="http://www.baidu.com">www.baidu.com</a>
+
+<div class="container">
+	<div><p>++++++++</p></div>
+	<div class="content">
+		<p>content-main >>>>>></p>
+		<p>content-main >>>>>></p>
+		<p>content-main >>>>>></p>
+		<p>content-main >>>>>></p>
+	</div>
+	<div><p>++++++++</p></div>
+	<div><p>~~~~~~~~~~~~~</p></div>
+	<div><p>~~~~~~~~~~~~~</p></div>
+	<div><p>~~~~~~~~~~~~~</p></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+@mixin border-radius{
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+@mixin border-radius($radius:5px){
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin box-shadow($shadows...){
+  @if length($shadows) >= 1 {
+    -webkit-box-shadow: $shadows;
+    box-shadow: $shadows;
+  } @else {
+    $shadows: 0 0 2px rgba(#000,.25);
+    -webkit-box-shadow: $shadow;
+    box-shadow: $shadow;
+  }
+}
+
+button {
+  @include border-radius;
+}
+
+//可以传参数
+.box {
+  @include border-radius(3px);
+}
+
+//多个值
+@mixin center($width,$height){
+  width: $width;
+  height: $height;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -($height) / 2;
+  margin-left: -($width) / 2;
+}
+
+.box-center {
+  @include center(500px,300px);
+}
+
+
+.box3 {
+  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));
+}
+
+
+
+

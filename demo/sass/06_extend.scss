@@ -1,0 +1,26 @@
+%selected {
+  color: red;
+  background-color: white;
+}
+
+h1 %selected {
+  width: 70px;
+}
+
+div %selected {
+  width: 20px;
+}
+
+.disabled {
+  span {
+    width: 90px;
+  }
+  @extend %selected;
+}
+
+.enabled {
+  p {
+    color: #00AA88;
+  }
+  @extend %selected;
+}

@@ -1,0 +1,24 @@
+@mixin link-colors($normal, $hover, $visited) {
+  color: $normal;
+  &:hover {
+    color: $hover;
+  }
+  &:visited {
+    color: $visited;
+  }
+}
+
+a {
+  @include link-colors(blue, red, green);
+}
+
+// 或者 key - value 形式
+a {
+  @include link-colors(
+          $normal: blue,
+          $visited: green,
+          $hover: red
+  );
+}
+
+

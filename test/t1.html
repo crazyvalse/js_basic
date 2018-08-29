@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+
+</head>
+<body>
+
+<script>
+	function Person (name, age, job) {
+		this.name = name;
+		this.age = age;
+		this.job = job;
+		this.sayName = function () {
+			console.info(this.name);
+		};
+	}
+
+	var p1 = new Person("Zelda", 100, "Princess");
+	var p2 = new Person("Link", 120, "Guardian");
+
+	//p1.sayName();
+	//p2.sayName();
+
+	//console.info(p1 instanceof Person);
+	/*console.info(p1.constructor);
+	 console.info(Person);*/
+
+	//console.info(p1.constructor === Person);
+
+	//Person("Zac", 111, "Joker");
+	console.info(p1.sayName == p2.sayName)
+
+
+
+
+
+</script>
+</body>
+</html>

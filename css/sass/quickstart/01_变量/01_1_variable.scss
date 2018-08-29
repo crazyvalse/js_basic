@@ -1,0 +1,16 @@
+//1. 变量定义的范围
+//全局
+$nav-color: #F90;
+nav {
+  //局部
+  $width: 100px;
+  width: $width;
+  color: $nav-color;
+}
+
+// 有空格也是可以的
+$highlight-color: #F90;
+.selected {
+  border: 1px solid $highlight-color;
+}
+
