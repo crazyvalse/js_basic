@@ -4,9 +4,10 @@
 var express = require('express');
 var app = express();
 
-app.get('/hello', function(req, res){
-	console.info(req.valueOf())
-	res.send('hello world!');
+app.get('/hello', function(request, response){
+	console.info(request.valueOf())
+	response.send('hello world!');
 });
 
 app.listen(3000);
+
