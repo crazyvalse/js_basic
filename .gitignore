@@ -61,3 +61,4 @@ source_code/
 
 .idea
 .DS_Store
+*.map
