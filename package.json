@@ -17,6 +17,7 @@
     "jest": "^23.5.0",
     "jscrypt": "^1.1.1",
     "mockjs": "^1.0.1-beta3",
+    "moment": "^2.22.2",
     "nod3des": "0.0.3"
   },
   "dependencies": {
