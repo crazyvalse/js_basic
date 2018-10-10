@@ -1,0 +1,1 @@
+htpasswd -d  /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d/pass_file guzm

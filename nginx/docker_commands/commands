@@ -1,9 +1,10 @@
 reload
-docker exec -it 4bb65c891ce3 /etc/init.d/nginx reload
+docker exec -it f7797eb05ccd /etc/init.d/nginx reload
 
 启动 nginx 并指定映射端口, 挂载volumn
 docker run --name=ng-study-01 -p 5700:8080 -p 5701:8081 -p 5702:8082 -d \
 -v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/www:/usr/share/nginx/html \
+-v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/varwww:/var/www/html \
 -v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d:/etc/nginx/conf.d  \
 -v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/logs:/var/log/nginx  \
 nginx
@@ -16,3 +17,17 @@ docker restart 49527f78c28a2824e7a600db81b32afa243a4f294dad84c698a0d024863c93d5
 
 重新加载配置文件
 docker kill -s HUP 4bb65c891ce3
+
+覆盖 nginx.conf 文件
+docker cp /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/notes/nginx.conf 351c33dd7c60:/etc/nginx/nginx.conf
+
+加密
+htpasswd -d  /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d/pass_file guzm
+
+
+docker run --name=ng-study-02 -p 8080:8080 -d \
+-v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/www:/usr/share/nginx/html \
+-v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/varwww:/var/www/html \
+-v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d:/etc/nginx/conf.d  \
+-v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/logs:/var/log/nginx  \
+nginx

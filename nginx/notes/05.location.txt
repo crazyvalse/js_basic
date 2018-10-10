@@ -1,0 +1,46 @@
+location [=|~|~*|^~] patt {
+}
+
+因此,大类型可以分为3种
+location = patt {} [精准匹配]
+location patt{}  [一般匹配]
+location ~ patt{} [正则匹配]
+
+
+首先看有没有精准匹配,如果有,则停止匹配过程.
+
+1. 精准匹配
+server {
+	listen 8080;
+	server_name localhost;
+
+	location  = /index.html {
+	    root   /var/www/html;
+        index  index.html;
+    }
+
+    #精准匹配
+	location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+}
+
+
+2. 大小写敏感
+server {
+	listen 8080;
+	server_name localhost;
+
+	location  ~ /Example/ {
+	    root   /var/www/html;
+        index  index.html;
+    }
+
+    #精准匹配
+	location / {
+        root   /usr/share/nginx/html;
+        index  index.html index.htm;
+    }
+}
+

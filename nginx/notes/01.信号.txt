@@ -16,4 +16,4 @@ reopen — reopen log files
 -v — print nginx version.
 -V — print nginx version, compiler version, and configure parameters.
 
-docker kill -s HUP 4bb65c891ce3
+docker kill -s HUP 8bc610f25e65
