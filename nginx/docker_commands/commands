@@ -25,9 +25,9 @@ docker cp /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_ba
 htpasswd -d  /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d/pass_file guzm
 
 
-docker run --name=ng-study-02 -p 8080:8080 -d \
--v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/www:/usr/share/nginx/html \
--v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/varwww:/var/www/html \
--v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/conf.d:/etc/nginx/conf.d  \
--v /Users/codingnuts/Documents/WorkSpace/5_WebStorm/Github/js_basic/js_basic/nginx/share/logs:/var/log/nginx  \
+docker run --name=ng-study-03 -p 8880:8080 -d \
+-v $PWD/nginx/share/www:/usr/share/nginx/html \
+-v $PWD/nginx/share/varwww:/var/www/html \
+-v $PWD/nginx/share/conf.d:/etc/nginx/conf.d  \
+-v $PWD/nginx/share/logs:/var/log/nginx  \
 nginx
