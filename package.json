@@ -21,6 +21,7 @@
     "nod3des": "0.0.3"
   },
   "dependencies": {
-    "formidable": "^1.2.1"
+    "formidable": "^1.2.1",
+    "koa": "^2.5.3"
   }
 }
