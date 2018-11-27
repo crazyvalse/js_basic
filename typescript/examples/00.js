@@ -15,7 +15,7 @@ function foo01(a, b, c) {
     console.log(c);
 }
 //自定义类型
-var Person = (function () {
+var Person = /** @class */ (function () {
     function Person() {
     }
     return Person;

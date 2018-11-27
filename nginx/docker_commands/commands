@@ -31,3 +31,25 @@ docker run --name=ng-study-03 -p 8880:8080 -d \
 -v $PWD/nginx/share/conf.d:/etc/nginx/conf.d  \
 -v $PWD/nginx/share/logs:/var/log/nginx  \
 nginx
+
+
+ng-001
+docker run --name=ng-servers-001 -p 5701:8080 -d \
+-v $PWD/nginx/servers/ng1/www:/usr/share/nginx/html \
+-v $PWD/nginx/servers/ng1/conf.d:/etc/nginx/conf.d  \
+-v $PWD/nginx/servers/ng1/logs:/var/log/nginx  \
+nginx
+
+ng-002
+docker run --name=ng-servers-002 -p 5702:8080 -d \
+-v $PWD/nginx/servers/ng2/www:/usr/share/nginx/html \
+-v $PWD/nginx/servers/ng2/conf.d:/etc/nginx/conf.d  \
+-v $PWD/nginx/servers/ng2/logs:/var/log/nginx  \
+nginx
+
+ng-003
+docker run --name=ng-servers-003 -p 5703:8080 -d \
+-v $PWD/nginx/servers/ng3/www:/usr/share/nginx/html \
+-v $PWD/nginx/servers/ng3/conf.d:/etc/nginx/conf.d  \
+-v $PWD/nginx/servers/ng3/logs:/var/log/nginx  \
+nginx

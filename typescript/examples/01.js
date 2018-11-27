@@ -1,13 +1,21 @@
 /**
  * Created by codingnuts on 2018/9/3.
  */
-var __extends = (this && this.__extends) || function (d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-};
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //类的声明
-var Person = (function () {
+var Person = /** @class */ (function () {
     function Person(name, age) {
         if (age === void 0) { age = 10; }
         this.name = name;
@@ -22,12 +30,13 @@ var Person = (function () {
     return Person;
 }());
 //子类拥有父类的属性和方法,还可以自定义自己属性和方法
-var Employee = (function (_super) {
+var Employee = /** @class */ (function (_super) {
     __extends(Employee, _super);
     function Employee(name, code) {
-        _super.call(this, name); //子类构造函数必选调用父类构造函数
+        var _this = _super.call(this, name) || this;
         console.log("xixi");
-        this.code = code;
+        _this.code = code;
+        return _this;
     }
     Employee.prototype.work = function () {
         _super.prototype.eat.call(this); //调用父类方法
